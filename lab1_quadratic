@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a, b,c;
+    printf("Enter a, b and c\n");
+    scanf("%d%d%d",&a,&b,&c);
+    float r1,r2;
+    float dis=(b*b)-(4*a*c);
+    if(dis==0)
+    {
+        printf("Equal roots\n");
+        r1=(-b)/(2*a);
+        printf("Roots are equal and value is :%f",r1);
+
+    }
+    else if(dis>0)
+    {
+        printf("Real roots\n");
+        r1=(-b+sqrt(dis))/(2*a);
+        r2=(-b-sqrt(dis))/(2*a);
+        printf("Roots are real and different : %f and %f",r1,r2);
+
+    }
+    else
+    {
+        printf("Roots are imaginary");
+        r1=(-b)/2*a;
+        r2=sqrt(-dis)/(2*a);
+        printf("Roots are imaginary : %f,%,%f and %f",r1,r2,r1,-r2);
+    }
+}
